@@ -56,7 +56,7 @@ class GalleryService
     public function storeComm(Request $request)
     {
         $request->validate([
-            'description' => 'required',
+            'description' => 'required|max:1000',
         ]);
 
         $comment = new Comment();
