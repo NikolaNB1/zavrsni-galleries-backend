@@ -19,7 +19,7 @@ class GalleryFactory extends Factory
         return [
             'name' => fake()->sentence(2),
             'description' => fake()->text(100),
-            'urls' => json_encode([fake()->imageUrl(), fake()->imageUrl(), fake()->imageUrl()]),
+            'urls' => json_encode([fake()->imageUrl(640, 480, 'jpg'), fake()->imageUrl(640, 480, 'jpg'), fake()->imageUrl(640, 480, 'jpg')]),
             'user_id' => rand(1, 10),
         ];
     }
